@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coinflip Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Coinflip Game</h1>
+            <p>Test your luck with a virtual coin flip!</p>
+        </header>
+
+        <main>
+            <div class="game-area">
+                <div class="coin-container">
+                    <div class="coin" id="coin">
+                        <div class="coin-side heads">
+                            <div class="coin-face">
+                                <div class="coin-text">HEADS</div>
+                                <div class="coin-symbol">👑</div>
+                            </div>
+                        </div>
+                        <div class="coin-side tails">
+                            <div class="coin-face">
+                                <div class="coin-text">TAILS</div>
+                                <div class="coin-symbol">🦅</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <div class="prediction-section">
+                        <h2>Make Your Prediction</h2>
+                        <div class="prediction-buttons">
+                            <button class="prediction-btn" id="predict-heads" data-prediction="heads">
+                                <span class="btn-icon">👑</span>
+                                <span class="btn-text">Heads</span>
+                            </button>
+                            <button class="prediction-btn" id="predict-tails" data-prediction="tails">
+                                <span class="btn-icon">🦅</span>
+                                <span class="btn-text">Tails</span>
+                            </button>
+                        </div>
+                        <div class="current-prediction" id="current-prediction">
+                            Select your prediction
+                        </div>
+                    </div>
+
+                    <button class="flip-btn" id="flip-btn" disabled>
+                        <span class="flip-text">Flip Coin</span>
+                        <div class="flip-loader" id="flip-loader"></div>
+                    </button>
+                </div>
+
+                <div class="result-section" id="result-section">
+                    <div class="result-message" id="result-message"></div>
+                    <div class="result-outcome" id="result-outcome"></div>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <h2>Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="total-flips">0</div>
+                        <div class="stat-label">Total Flips</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="correct-predictions">0</div>
+                        <div class="stat-label">Correct Predictions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="accuracy-rate">0%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="heads-count">0</div>
+                        <div class="stat-label">Heads Count</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="tails-count">0</div>
+                        <div class="stat-label">Tails Count</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="current-streak">0</div>
+                        <div class="stat-label">Current Streak</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <h2>Flip History</h2>
+                <div class="history-controls">
+                    <button class="clear-history-btn" id="clear-history">Clear History</button>
+                    <button class="reset-stats-btn" id="reset-stats">Reset All Stats</button>
+                </div>
+                <div class="history-list" id="history-list">
+                    <div class="history-empty">No flips yet. Start playing!</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Coinflip Game. Built with vanilla JavaScript.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
